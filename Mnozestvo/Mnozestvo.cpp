@@ -5,7 +5,12 @@
 #include "Set.h"
 int main()
 {
+	
 	Set set;
+	Set a(5);
+	Set b(3);
+	Set c = a.Union(b);
+	
 	
 }
 
