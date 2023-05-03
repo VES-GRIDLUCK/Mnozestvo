@@ -32,6 +32,60 @@ public:
 			}
 		}
 	}
+	~Set() {
+		delete arr;
+	}
+
+	int Add(int n) {
+		if (isInSet(n)) {
+
+		}
+		else {
+			int* temp = new int[size + 1];
+			for (int i = 0; i < size; i++) {
+				temp[i] = arr[i];
+			}
+			temp[size] = n;
+			delete[] arr;
+			temp = arr;
+		}
+	}
+
+	int Delete(int n) {
+		if (isInSet(n)) {
+			int* temp = new int[size - 1];
+			for (int i = 0; i < size; i++) {
+				if (n != i - 1) {
+					temp[i] = arr[i];
+				}
+				else {
+
+				}
+			}
+			delete[] arr;
+			temp = arr;
+		}
+		else {
+			
+		}
+	}
+
+	Set Union(Set s1) {
+		Set *temp = new Set;
+		for (int i = 0; i < size; i++)
+		{
+			temp->Add(arr[i]);
+		}
+		for (int i = 0; i < size; i++)
+		{
+			temp->Add(s1.arr[i]);
+		}
+		return *temp;
+	}
+	int Print() {
+		
+	}
 };
+}
 
 
